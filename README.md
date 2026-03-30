@@ -148,13 +148,15 @@ target/karate-reports/features.login.html
 
 Podés ejecutar un subconjunto de escenarios usando tags de Karate:
 
-| Tag           | Descripción                                   | Comando                                              |
-|---------------|-----------------------------------------------|------------------------------------------------------|
-| `@smoke`      | Escenarios críticos de camino feliz           | `mvn test -Dkarate.options="--tags @smoke"`          |
-| `@error-path` | Escenarios de flujo de error                  | `mvn test -Dkarate.options="--tags @error-path"`     |
-| `@edge-case`  | Escenarios de borde sin contrato formal       | `mvn test -Dkarate.options="--tags @edge-case"`      |
-| `@seguridad`  | Escenarios con implicaciones de seguridad     | `mvn test -Dkarate.options="--tags @seguridad"`      |
-| `@critico`    | Escenarios críticos bloqueantes de release    | `mvn test -Dkarate.options="--tags @critico"`        |
+| Tag           | Descripción                                   | Comando                                               |
+|---------------|-----------------------------------------------|-------------------------------------------------------|
+| `@smoke`      | Escenarios críticos de camino feliz           | `mvn test "-Dkarate.options=--tags @smoke"`           |
+| `@error-path` | Escenarios de flujo de error                  | `mvn test "-Dkarate.options=--tags @error-path"`      |
+| `@edge-case`  | Escenarios de borde sin contrato formal       | `mvn test "-Dkarate.options=--tags @edge-case"`       |
+| `@seguridad`  | Escenarios con implicaciones de seguridad     | `mvn test "-Dkarate.options=--tags @seguridad"`       |
+| `@critico`    | Escenarios críticos bloqueantes de release    | `mvn test "-Dkarate.options=--tags @critico"`         |
+
+> **PowerShell:** el argumento `-D` debe ir dentro de una sola cadena de comillas (`"-Dkarate.options=..."`) para que el espacio no parta el argumento en dos. La sintaxis `mvn test -Dkarate.options="--tags @smoke"` falla en PowerShell.
 
 ---
 
