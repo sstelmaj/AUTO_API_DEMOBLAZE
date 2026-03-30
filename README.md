@@ -186,3 +186,8 @@ Karate genera automáticamente los siguientes artefactos en `target/karate-repor
 | AC-US-03  | Login    | Login exitoso — token de sesión válido                  | `@smoke @critico @seguridad`  | ✅ PASS   |
 | AC-US-04  | Login    | Login fallido — usuario inexistente                     | `@error-path @seguridad`      | ✅ PASS   |
 | EC-US-02  | Login    | Password vacío — errorMessage observable                | `@edge-case`                  | ✅ PASS   |
+
+## Screenshot del reporte de karate de la suit completa
+
+<img width="1903" height="217" alt="image" src="https://github.com/user-attachments/assets/e8d22061-9af0-4f26-81a8-777d230b5ce6" />
+
